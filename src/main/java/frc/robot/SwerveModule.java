@@ -89,4 +89,7 @@ public class SwerveModule {
             Rotation2d.fromRotations(mAngleMotor.getPosition().getValue())
         );
     }
+    public void forceSetAngle(Rotation2d angle){
+        mAngleMotor.setControl(anglePosition.withPosition(angle.getRotations()));
+    }
 }
